@@ -379,26 +379,28 @@ lvgl:
                   service: light.toggle
                   data:
                     entity_id: light.office_storage
-
-        # Network Rack
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: true
-            id: network_rack_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: network_rack_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: network_rack_label
-                  text: "Network Rack"
-            on_click:
-              - homeassistant.service:
-                  service: light.toggle
-                  data:
-                    entity_id: light.office_network_rack
+        
+        # Front Left Strip
+- button:
+    height: $button_height_single
+    width: $button_width
+    checkable: true
+    id: front_left_button
+    styles: control
+    widgets:
+      - label:
+          text_font: $icon_font
+          align: top_left
+          id: front_left_icon
+          text: $light
+      - label:
+          align: bottom_left
+          id: front_left_label
+          text: "Front Left Strip"
+    on_click:
+      - homeassistant.service:
+          service: light.toggle
+          data:
+            entity_id: light.front_left_strip
+    
+        
