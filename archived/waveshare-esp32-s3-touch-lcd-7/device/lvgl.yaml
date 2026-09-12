@@ -14,11 +14,15 @@ lvgl:
             width: $screen_width
             height: $button_height_single
 
-        # 💡 Lighting Controls
-        - row:
-            align: center
-            spacing: 10
-            widgets:
+        # 💡 Lighting Control- container:
+              - container:
+                  layout: flex
+                  flex_flow: row
+                  align: center
+                  spacing: 10
+                  widgets:
+                    
+          ...
 
               # Front Left Strip
               - button:
